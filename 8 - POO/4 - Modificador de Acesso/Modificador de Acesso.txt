@@ -1,0 +1,14 @@
+Os modificadores de acesso podem ser utilizados em classes, atributos, métodos, construtores e classe interna, no entanto, private e protected não pode ser utilizados em classes normais (top-level), apenas em classes internas (inner class).
+
+
+
+
+
+
+Public: Pode ser acessado por qualquer classe do programa.
+
+Private (encapsulamento): Pode ser acessado apenas dentro da própria classe.
+
+Protected: Pode ser acessado pela mesma classe, por classes dentro do mesmo pacote e por subclasses (mesmo de outros pacotes)
+
+Default (quando não escreve nada): Pode ser acessado dentro da propria classe e por classes dentro do mesmo pacote.
