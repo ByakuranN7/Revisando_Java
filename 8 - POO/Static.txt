@@ -1,0 +1,29 @@
+Static means basically that you don't need to instantiate the class (make an Object based on your class) to use the method.
+
+If you have a Car class and an OpenDoor() method then you have to have an instance of the Car class in order to be able to call OpenDoor() on it.
+
+On the other hand, if there is a method called MilesPerGallonToLitresPer100Km() you don't have to have a Car object for it to make sense - it can be static, operating within the class, but not on any concrete object belonging to that class.
+
+"The particular member belongs to a type itself, rather than to an instance of that type"
+
+
+
+
+
+
+Usar tudo como static em Java pode parecer tentador pela simplicidade e fatores de performance que podem ser alcançados, mas há várias razões para evitar isso:
+
+Estado de Instância
+Evite usar static para variáveis que devem ser únicas para cada instância da classe. Por exemplo, se você tem uma classe Pessoa com uma variável nome, cada instância da classe deve ter seu próprio nome. Usar static faria com que todas as instâncias compartilhassem o mesmo nome, o que não é desejável.
+
+Orientação a Objetos
+Java é uma linguagem orientada a objetos, e o uso excessivo de static vai contra esse paradigma, pois abusar dele pode resultar em um design que não aproveita os benefícios completos da Programação Orientada a Objetos, como Herança.
+
+Testabilidade
+Métodos e variáveis static podem dificultar a criação de testes unitários, pois introduzem dependências globais. Isso pode tornar os testes menos isolados e mais difíceis de configurar.
+
+Memória
+Variáveis estáticas permanecem na memória durante toda a execução do programa. Isso pode levar a um uso ineficiente da memória se não forem gerenciadas corretamente. O risco de estouro de memória (OutOfMemoryError) aumenta com muitas variáveis estáticas, especialmente em aplicações de longa duração ou que lidam com muitos dados.
+
+Quando Usar?
+Você deve usar static em Java quando precisar de membros que pertençam à classe em vez de instâncias individuais. Usar static pode melhorar a eficiência e a clareza do código em situações onde o comportamento ou o dado não precisa ser específico a uma instância.

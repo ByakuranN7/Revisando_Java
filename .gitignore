@@ -1,0 +1,12 @@
+# Anotações pessoais/Temporárias
+a.txt
+Comandos do terminal.txt
+
+# Arquivos compilados Java
+*.class
+
+# Arquivos compactados
+*.zip
+
+# Executáveis
+*.exe

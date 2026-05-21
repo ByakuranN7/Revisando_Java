@@ -1,0 +1,4 @@
+Quando passamos um valor para o método, por exemplo "metodoSoma(1, 2);" estamos enviando uma cópia  do valor.
+
+
+Quando passamos um objeto, por exemplo "cargaHoraria(Funcionario func)", passamos uma referência ao objeto, sendo assim, a forma como funciona na prática é diferente da passagem por valor.

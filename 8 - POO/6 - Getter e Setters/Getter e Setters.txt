@@ -1,0 +1,18 @@
+Para que outras partes do seu código possam interagir isoladamente com essas variáveis, poderíamos adicionar dois tipos de métodos que seguem um padrão de nomes em Java:
+
+Getter: Um método para obter (pegar) o valor de uma variável membro. O nome segue o padrão get**NomeDaVariavel**().
+
+Setter: Um método para definir (mudar) o valor de uma variável membro. O nome segue o padrão set**NomeDaVariavel**().
+
+
+
+Por que usá-los?
+Os getters e setters permitem que você acesse ou mude individualmente cada informação. Isso dá mais controle sobre seus dados.
+
+
+
+Com eles, você pode:
+
+Definir ou mudar apenas o nome ou salário usando um setter.  Por exemplo, poderíamos inserir na classe Funcionario o método setNome(String nomeInit) e setSalario(String salarioInit)
+
+Obter apenas o nome ou o salário usando um getter. Por exemplo, poderíamos inserir na classe Funcionario o método getNome() e getSalario()

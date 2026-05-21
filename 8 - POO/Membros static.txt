@@ -1,0 +1,13 @@
+Membros estáticos:
+
+class NomeDaClasse{
+	static tipo nomeDoMembro;
+}
+
+
+
+1 - Pertencem à classe, não ao objeto (são criados quando a classe é carregada na memoria e existem enquanto a classe permanece na memória).
+
+2 - Podem ser acessados pelo nome da classe (não há a necessidade de criar um método para acessar ele);
+
+3 - Todos os objetos da classe compartilham do mesmo membro estático (todas as alterações feitas em um membro estático, é feita em todos os objetos da classe).
