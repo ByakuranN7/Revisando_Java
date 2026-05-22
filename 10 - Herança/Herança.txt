@@ -1,0 +1,87 @@
+# Herança
+
+Permite que uma classe herde atributos e métodos de outra.
+
+Classe pai = superclasse
+Classe filha = subclasse
+
+Sintaxe:
+
+class Cachorro extends Animal
+
+---
+
+# Override
+
+A subclasse pode sobrescrever métodos da superclasse.
+
+Exemplo:
+
+class Animal {
+    void emitirSom() {
+        System.out.println("Som genérico");
+    }
+}
+
+class Cachorro extends Animal {
+
+    @Override
+    void emitirSom() {
+        System.out.println("Au au");
+    }
+}
+
+---
+
+@Override:
+indica que o método está sendo sobrescrito.
+
+---
+
+super:
+acessa métodos/construtor da superclasse.
+
+Exemplo com método:
+
+class Animal {
+
+    void emitirSom() {
+        System.out.println("Som genérico");
+    }
+}
+
+class Cachorro extends Animal {
+
+    @Override
+    void emitirSom() {
+
+        super.emitirSom();
+
+        System.out.println("Au au");
+    }
+}
+
+---
+
+Exemplo com construtor:
+
+class Pessoa {
+
+    String nome;
+
+    Pessoa(String nome) {
+        this.nome = nome;
+    }
+}
+
+class Aluno extends Pessoa {
+
+    int matricula;
+
+    Aluno(String nome, int matricula) {
+
+        super(nome);
+
+        this.matricula = matricula;
+    }
+}
