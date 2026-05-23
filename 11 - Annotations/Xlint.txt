@@ -1,0 +1,39 @@
+# -Xlint
+
+Mostra avisos extras do compilador Java.
+
+Usado na compilação:
+
+javac -Xlint Arquivo.java
+
+---
+
+Ajuda a encontrar:
+
+- variáveis não usadas
+- código obsoleto
+- casts perigosos
+- problemas com generics
+- outros possíveis erros
+
+---
+
+Exemplo:
+
+@SuppressWarnings("unused")
+int x;
+
+Sem o @SuppressWarnings, o -Xlint pode mostrar aviso de variável não usada.
+
+---
+
+Também pode usar categorias específicas:
+
+javac -Xlint:unchecked Arquivo.java
+
+Algumas categorias:
+
+- unchecked
+- deprecation
+- fallthrough
+- unused
