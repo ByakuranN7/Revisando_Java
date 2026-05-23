@@ -1,0 +1,65 @@
+# Annotations
+
+Annotations são "marcações" usadas para dar informações ao compilador ou ao Java.
+
+Sintaxe:
+
+@Override, @SuppressWarnings("unused"), @Deprecated
+
+---
+
+# @Override
+
+Indica que um método está sobrescrevendo outro da superclasse.
+
+Exemplo:
+
+class Animal {
+    void emitirSom() {
+
+    }
+}
+
+class Cachorro extends Animal {
+
+    @Override
+    void emitirSom() {
+
+    }
+}
+
+Ajuda a detectar erros de escrita e outros problemas de override.
+
+---
+
+# @SuppressWarnings
+
+Usado para esconder avisos do compilador.
+
+Exemplo:
+
+@SuppressWarnings("unused")
+
+int x;
+
+---
+
+# @Deprecated
+
+Indica que algo está obsoleto e não deveria mais ser usado (Na mesma classe normalmente não aparece warning no compilador).
+
+Exemplo:
+
+@Deprecated
+void metodoAntigo() {
+
+}
+
+---
+
+# Observações
+
+- annotations não substituem código
+- servem como metadados
+- começam com @
+- muito usadas em frameworks como Spring
