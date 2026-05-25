@@ -1,0 +1,30 @@
+Enum (enumeração) é como uma classe, mas usada para definir constantes e, em vez de usar class uso a palavra enum. As variáveis membros na enum, são final e static por padrão, e o próprio nome da variável também é o valor dela. Em alguns casos, o uso de Enum melhora o design da orientação a objetos.
+
+Exemplo de criação e uso de enum:
+
+enum DiaDaSemana {
+    SEGUNDA, TERÇA, QUARTA, QUINTA, SEXTA, SÁBADO, DOMINGO
+}
+
+public class ExemploEnum {
+    public static void main(String[] args) {
+        DiaDaSemana dia = DiaDaSemana.SEGUNDA;
+        System.out.println("Hoje é " + dia);
+    }
+}
+
+Saída (após compilar e rodar esse código):
+
+Hoje é SEGUNDA
+
+---
+
+Neste exemplo, dia é uma variável do tipo DiaDaSemana e só pode assumir os valores definidos no enum.
+
+---
+
+
+
+
+
+

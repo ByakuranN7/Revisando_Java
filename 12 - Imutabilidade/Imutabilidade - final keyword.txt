@@ -1,0 +1,59 @@
+# Imutabilidade / final
+
+A palavra final pode impedir alterações em variáveis, métodos e classes.
+
+---
+
+# final em variável
+
+Impede que o valor seja alterado.
+
+Exemplo:
+
+final int idade = 18;
+
+idade = 20; // erro
+
+---
+
+# final em método
+
+Impede que o método seja sobrescrito (override).
+
+Use quando você quer garantir que subclasses não alterem o comportamento do método.
+
+Exemplo:
+
+class Animal {
+
+    final void dormir() {
+
+    }
+}
+
+class Cachorro extends Animal {
+
+    void dormir() { // erro
+
+    }
+}
+
+---
+
+# final em classe
+
+Impede herança.
+
+Use quando você não quer que outra classe herde dela.
+
+Exemplo:
+
+final class ContaBancaria {
+
+}
+
+class ContaPremium extends ContaBancaria { // erro
+
+}
+
+---
