@@ -1,0 +1,17 @@
+Em Java, a convenção de nomenclatura para constantes é diferente da usada para variáveis comuns. Aqui estão alguns pontos importantes:
+
+Uso de letras maiúsculas: Os nomes das constantes são escritos em letras maiúsculas. Por exemplo, se fosse uma variável comum, você poderia nomeá-la como constanteExemplo, mas como é uma constante, o nome seria CONSTANTE_EXEMPLO.
+
+Separação por sublinhados: Se o nome da constante tiver mais de uma palavra, as palavras são separadas por sublinhados. Por exemplo, TAXA_DE_JUROS.
+
+Regras de nomeação: As constantes devem seguir algumas regras de nomeação:
+
+Devem conter apenas letras, sublinhados (_), cifrões ($) ou números de 0 a 9.
+
+Devem começar com uma letra, sublinhado (_) ou cifrão ($).
+
+Não podem usar palavras-chave da linguagem.
+
+O nome deve ser único dentro de um escopo.
+
+Essas práticas ajudam a manter o código claro e fácil de entender, além de evitar erros durante a execução do programa.
