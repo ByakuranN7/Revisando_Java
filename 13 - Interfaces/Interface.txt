@@ -1,0 +1,126 @@
+# Interface
+
+Interface define um contrato que uma classe deve seguir.
+
+Ela define comportamentos/métodos que uma classe pode implementar.
+
+Usa-se: interface NomeInterface
+
+---
+
+# implements
+
+Uma classe usa interface com: implements
+
+Exemplo:
+
+interface Animal {
+
+    void emitirSom();
+}
+
+class Cachorro implements Animal {
+
+    @Override
+    public void emitirSom() {
+        System.out.println("Au au");
+    }
+}
+
+---
+
+# Métodos abstratos
+
+Métodos da interface são public abstract por padrão.
+
+Exemplo:
+
+interface Animal {
+
+    void emitirSom();
+}
+
+A classe que implementar a interface é obrigada a implementar os métodos abstratos.
+
+Se não implementar, a classe precisa ser abstract.
+
+Exemplo:
+
+abstract class Gato implements Animal {
+
+}
+
+---
+
+# Métodos default
+
+Interfaces podem possuir métodos com implementação usando default.
+
+Exemplo:
+
+interface Animal {
+
+    default void dormir() {
+        System.out.println("Dormindo");
+    }
+}
+
+Métodos default NÃO são obrigatórios de implementar/sobrescrever.
+
+A classe pode usar o método normalmente sem criar outro.
+
+Também podem ser sobrescritos se necessário.
+
+---
+
+# Métodos static
+
+Interfaces podem ter métodos static.
+
+Exemplo:
+
+interface Calculadora {
+
+    static int somar(int a, int b) {
+        return a + b;
+    }
+}
+
+Métodos static pertencem à interface e não ao objeto.
+
+Uso:
+
+Calculadora.somar(5, 5);
+
+Eles não são herdados nem sobrescritos.
+
+---
+
+# Características
+
+- não cria objetos
+- define comportamentos
+- permite múltiplas interfaces
+- atributos são public static final por padrão
+
+---
+
+# Implementar várias interfaces
+
+Uma classe pode implementar várias interfaces.
+
+Exemplo:
+
+class Pessoa implements Corredor, Nadador {
+
+}
+
+---
+
+# Diferença entre herança e interface
+
+extends:
+herda de uma classe
+
+implements:
+implementa uma interface
