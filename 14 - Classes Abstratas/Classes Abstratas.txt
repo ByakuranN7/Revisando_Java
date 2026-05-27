@@ -1,0 +1,149 @@
+# Classe Abstrata
+
+Uma classe abstrata é uma classe que não pode criar objetos diretamente.
+
+Usa-se:
+
+abstract class NomeClasse
+
+Exemplo:
+
+abstract class Animal {
+
+}
+
+Animal a = new Animal(); // erro
+
+---
+
+# Objetivo
+
+Servem como base/modelo para outras classes.
+
+Normalmente possuem comportamentos gerais que serão herdados.
+
+---
+
+# Métodos abstratos
+
+Classes abstratas podem possuir métodos abstratos.
+
+Métodos abstratos:
+- não possuem corpo
+- obrigam subclasses concretas a implementar
+
+Exemplo:
+
+abstract class Animal {
+
+    abstract void emitirSom();
+}
+
+class Cachorro extends Animal {
+
+    @Override
+    void emitirSom() {
+        System.out.println("Au au");
+    }
+}
+
+---
+
+# Regras importantes
+
+Se uma classe possui método abstrato,
+ela obrigatoriamente deve ser abstract.
+
+Exemplo:
+
+abstract class Animal {
+
+    abstract void emitirSom();
+}
+
+---
+
+Uma subclasse concreta deve implementar os métodos abstratos.
+
+Se não implementar, ela também precisa ser abstract.
+
+Exemplo:
+
+abstract class Gato extends Animal {
+
+}
+
+---
+
+# Métodos normais
+
+Classes abstratas também podem possuir métodos normais.
+
+Exemplo:
+
+abstract class Animal {
+
+    void dormir() {
+        System.out.println("Dormindo");
+    }
+}
+
+---
+
+# Atributos e construtores
+
+Classes abstratas podem ter:
+- atributos
+- construtores (utilizados pela subclasse através de super)
+- métodos normais
+- métodos static
+- métodos final
+
+Exemplo:
+
+abstract class Pessoa {
+
+    String nome;
+
+    Pessoa(String nome) {
+        this.nome = nome;
+    }
+}
+
+---
+
+# Diferença entre interface e classe abstrata
+
+Interface:
+- define contrato/comportamento
+- permite múltiplas interfaces
+- não possui estado de instância normalmente
+
+Classe abstrata:
+- serve como base de herança
+- pode possuir implementação e estado
+- usa extends
+
+---
+
+# extends
+
+Classes abstratas são herdadas com:
+
+extends
+
+Exemplo:
+
+class Cachorro extends Animal {
+
+}
+
+---
+
+# Quando usar
+
+Interface:
+quando quer definir capacidades/comportamentos.
+
+Classe abstrata:
+quando várias classes compartilham lógica/atributos em comum.
