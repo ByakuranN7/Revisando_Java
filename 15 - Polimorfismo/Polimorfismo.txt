@@ -1,0 +1,119 @@
+# Polimorfismo
+
+Polimorfismo permite que objetos diferentes sejam tratados de forma genérica.
+
+A mesma referência pode ter diferentes comportamentos.
+
+---
+
+# Exemplo básico
+
+class Animal {
+
+    void emitirSom() {
+        System.out.println("Som genérico");
+    }
+}
+
+class Cachorro extends Animal {
+
+    @Override
+    void emitirSom() {
+        System.out.println("Au au");
+    }
+}
+
+class Gato extends Animal {
+
+    @Override
+    void emitirSom() {
+        System.out.println("Miau");
+    }
+}
+
+---
+
+# Polimorfismo na prática
+
+Animal a1 = new Cachorro();
+
+Animal a2 = new Gato();
+
+a1.emitirSom();
+a2.emitirSom();
+
+Saída:
+
+Au au
+Miau
+
+Mesmo usando referência Animal,
+cada objeto executa seu próprio método.
+
+---
+
+# Tipos comuns
+
+Polimorfismo por herança:
+usa extends
+
+Polimorfismo por interface:
+usa implements
+
+---
+
+# Upcasting
+
+Quando um objeto da subclasse é tratado como superclasse.
+
+Exemplo:
+
+Animal a = new Cachorro();
+
+Isso é automático.
+
+---
+
+# Overriding
+
+Polimorfismo normalmente acontece com sobrescrita de métodos.
+
+Exemplo:
+
+@Override
+void emitirSom()
+
+---
+
+# Vantagens
+
+- código mais flexível
+- reutilização
+- menos acoplamento
+- facilita manutenção
+
+---
+
+# instanceof
+
+Usado para verificar o tipo real do objeto.
+
+Exemplo:
+
+if(a instanceof Cachorro) {
+
+}
+
+---
+
+# Importante
+
+O tipo da referência limita o que pode ser acessado.
+
+Exemplo:
+
+Animal a = new Cachorro();
+
+a.emitirSom(); // ok
+
+a.buscarBola(); // erro se existir só em Cachorro
