@@ -1,0 +1,134 @@
+# Generics
+
+Generics permitem criar classes, métodos e coleções que funcionam com diferentes tipos.
+
+Evita repetição de código e aumenta a segurança de tipos.
+
+---
+
+# Sintaxe
+
+Usa-se:
+
+<T>
+
+Exemplo:
+
+class Caixa<T> {
+
+    T valor;
+}
+
+T representa um tipo genérico.
+
+---
+
+# Exemplo
+
+class Caixa<T> {
+
+    T valor;
+
+    void guardar(T valor) {
+        this.valor = valor;
+    }
+
+    T pegar() {
+        return valor;
+    }
+}
+
+Uso:
+
+Caixa<String> caixaTexto = new Caixa<>();
+
+caixaTexto.guardar("Olá");
+
+---
+
+# Vantagens
+
+- reutilização de código
+- evita casts desnecessários
+- mais segurança de tipos
+- erros detectados em compilação
+
+---
+
+# Sem Generics
+
+ArrayList lista = new ArrayList();
+
+lista.add("João");
+
+String nome = (String) lista.get(0);
+
+Necessita cast.
+
+---
+
+# Com Generics
+
+ArrayList<String> lista = new ArrayList<>();
+
+lista.add("João");
+
+String nome = lista.get(0);
+
+Sem cast.
+
+---
+
+# Tipos comuns
+
+ArrayList<String>
+
+ArrayList<Integer>
+
+HashMap<String, Integer>
+
+---
+
+# Métodos genéricos
+
+Métodos também podem usar generics.
+
+Exemplo:
+
+public <T> void imprimir(T valor) {
+
+    System.out.println(valor);
+}
+
+---
+
+# Wildcard
+
+Usa-se:
+
+?
+
+Representa tipo desconhecido.
+
+Exemplo:
+
+ArrayList<?> lista;
+
+---
+
+# Importante
+
+Generics funcionam apenas com objetos.
+
+Tipos primitivos como:
+- int
+- double
+- char
+
+não podem ser usados diretamente.
+
+Use wrappers:
+
+- Integer
+- Double
+- Character
