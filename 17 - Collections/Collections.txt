@@ -1,0 +1,185 @@
+# Collections
+
+Collections são estruturas prontas para armazenar e manipular grupos de objetos.
+
+Fazem parte do Java Collections Framework.
+
+Pacote:
+
+java.util
+
+---
+
+# Vantagens
+
+- tamanho dinâmico
+- métodos prontos
+- fácil manipulação de dados
+- mais flexível que arrays
+
+---
+
+# Array vs Collection
+
+Array:
+
+int[] numeros = new int[10];
+
+Tamanho fixo.
+
+Collection:
+
+ArrayList<Integer> numeros = new ArrayList<>();
+
+Tamanho cresce automaticamente.
+
+---
+
+# ArrayList
+
+Coleção mais utilizada.
+
+Armazena elementos em sequência.
+
+Exemplo:
+
+ArrayList<String> nomes = new ArrayList<>();
+
+nomes.add("João");
+nomes.add("Maria");
+
+---
+
+# Métodos comuns do ArrayList
+
+add()
+
+Adiciona elemento.
+
+nomes.add("Pedro");
+
+---
+
+get()
+
+Obtém elemento pelo índice.
+
+nomes.get(0);
+
+---
+
+set()
+
+Altera elemento.
+
+nomes.set(0, "Carlos");
+
+---
+
+remove()
+
+Remove elemento.
+
+nomes.remove(0);
+
+---
+
+size()
+
+Retorna quantidade de elementos.
+
+nomes.size();
+
+---
+
+contains()
+
+Verifica se existe.
+
+nomes.contains("João");
+
+---
+
+# Percorrendo ArrayList
+
+for tradicional:
+
+for(int i = 0; i < nomes.size(); i++) {
+
+    System.out.println(nomes.get(i));
+}
+
+---
+
+for-each:
+
+for(String nome : nomes) {
+
+    System.out.println(nome);
+}
+
+---
+
+# Generics
+
+Collections normalmente usam Generics.
+
+Exemplo:
+
+ArrayList<String>
+
+ArrayList<Integer>
+
+ArrayList<Double>
+
+Define qual tipo pode ser armazenado.
+
+---
+
+# Principais Collections
+
+ArrayList
+Lista dinâmica.
+
+LinkedList
+Lista encadeada.
+
+HashSet
+Não permite elementos repetidos.
+
+HashMap
+Armazena pares chave/valor.
+
+Exemplo:
+
+HashMap<String, Integer> notas;
+
+---
+
+# Importante
+
+Collections armazenam objetos.
+
+Tipos primitivos não podem ser usados diretamente.
+
+Use wrappers:
+
+int -> Integer
+
+double -> Double
+
+char -> Character
+
+boolean -> Boolean
+
+---
+
+# Importação
+
+import java.util.ArrayList;
+
+import java.util.LinkedList;
+
+import java.util.HashSet;
+
+import java.util.HashMap;
