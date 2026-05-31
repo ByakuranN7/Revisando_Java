@@ -1,0 +1,55 @@
+Variáveis sem Nome
+A partir do Java 22, é possível usar variáveis “sem nome” para simplificar o código, substituindo o nome da variável por um sublinhado (_).
+
+Por exemplo, ao capturar exceções sem as tratar explicitamente, você pode usar o sublinhado na cláusula catch em vez de colocar um nome na variável de Exception. Veja o exemplo abaixo:
+
+try {
+
+    // Código que pode lançar uma exceção
+
+} catch (Exception _) {
+
+    System.out.println("Ocorreu um problema.");
+
+}
+
+
+Antes:
+
+
+
+try {
+
+    int media = totalNotas / quantidadeAlunos; // Divisão por zero
+
+
+
+} catch (ArithmeticException ae) {
+
+        System.out.println("Problema: Divisão por zero!");
+
+}
+
+
+
+Depois:
+
+
+
+try {
+
+    int media = totalNotas / quantidadeAlunos; // Divisão por zero
+
+
+
+} catch (ArithmeticException _) { // trocamos o nome ae por _
+
+        System.out.println("Problema: Divisão por zero!");
+
+}
+
+Lembre-se de que o uso de variáveis sem nome deve ser feito com cuidado para não prejudicar a legibilidade do código. Em situações apropriadas, essa funcionalidade pode simplificar seu código e torná-lo mais conciso.
+
+
+
+Observação: As JEPs  (Java Enhancement Proposals), como a JEP 456 citada, são documentos que propõem melhorias para a linguagem Java. Elas descrevem novos recursos, alterações ou otimizações que podem ser adicionadas ao JDK.

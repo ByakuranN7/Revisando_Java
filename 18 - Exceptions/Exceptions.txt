@@ -1,0 +1,160 @@
+# Exceptions
+
+# Exceptions
+
+Exceptions são problemas que podem ocorrer durante a execução do programa e que podem ser tratados pelo código (tem todo erro pode ser tratado por exceptions, como falta de memória).
+
+Quando uma exception ocorre, o fluxo normal do programa é interrompido.
+
+---
+
+# try e catch
+
+Usa-se try para o código que pode gerar erro.
+
+Usa-se catch para tratar o erro.
+
+Exemplo:
+
+try {
+
+    int resultado = 10 / 0;
+
+} catch (ArithmeticException e) {
+
+    System.out.println("Não é possível dividir por zero.");
+}
+
+---
+
+# Capturando a exception
+
+A variável do catch contém informações sobre o erro.
+
+Exemplo:
+
+catch (Exception e) {
+
+    System.out.println(e.getMessage());
+}
+
+---
+
+# finally
+
+O bloco finally executa sempre, ocorrendo erro ou não.
+
+Exemplo:
+
+try {
+
+    System.out.println("Executando");
+
+} finally {
+
+    System.out.println("Finalizado");
+}
+
+---
+
+# throw
+
+Usado para lançar uma exception manualmente.
+
+Exemplo:
+
+if(idade < 0) {
+
+    throw new IllegalArgumentException("Idade inválida");
+}
+
+---
+
+# throws
+
+Usado para informar que um método pode lançar uma exception.
+
+Exemplo:
+
+public void lerArquivo() throws IOException {
+
+}
+
+---
+
+# Hierarquia
+
+Throwable
+ ├─ Error
+ └─ Exception
+      ├─ RuntimeException
+      └─ Checked Exceptions
+
+---
+
+# Checked Exceptions
+
+Devem ser tratadas ou declaradas com throws.
+
+Exemplo:
+
+IOException
+
+SQLException
+
+---
+
+# Unchecked Exceptions
+
+Não precisam ser tratadas obrigatoriamente.
+
+São subclasses de RuntimeException.
+
+Exemplo:
+
+ArithmeticException
+
+NullPointerException
+
+ArrayIndexOutOfBoundsException
+
+IllegalArgumentException
+
+---
+
+# Exception vs Error
+
+Exception:
+erros que podem ser tratados pelo programa.
+
+Error:
+problemas graves da JVM.
+
+Exemplo:
+
+OutOfMemoryError
+
+StackOverflowError
+
+---
+
+# Exemplo completo
+
+try {
+
+    int[] numeros = {1, 2, 3};
+
+    System.out.println(numeros[10]);
+
+} catch (ArrayIndexOutOfBoundsException e) {
+
+    System.out.println("Índice inválido.");
+}
+
+---
+
+# Importante
+
+Uma exception não tratada encerra a execução do programa.
+
+Por isso é comum usar try/catch quando há risco de erro.

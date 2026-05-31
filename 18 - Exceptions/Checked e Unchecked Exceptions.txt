@@ -1,0 +1,14 @@
+Em Java, as exceções são divididas em duas categorias principais: checked exceptions (exceções verificadas) e unchecked exceptions (exceções não verificadas).
+
+Checked Exceptions (Exceções Verificadas):
+São exceções que o compilador exige que você trate ou declare. Elas representam problemas que podem ocorrer e que você, como desenvolvedor, precisa estar ciente e resolver. Por exemplo: Exception, ArrayIndexOutOfBoundsException ou NullPointerException.
+
+Unchecked Exceptions (Exceções Não Verificadas):
+São exceções que o compilador não exige que você trate. Elas representam problemas que podem ocorrer durante a execução do programa, mas que não precisam ser verificados antecipadamente. Por exemplo: ArithmeticException.
+
+Regras para Subclasses de Exceções
+Se uma classe for subclasse de Exception, o compilador exige que você trate a exceção. Isso significa que seu programa não irá compilar se a exceção não for tratada ou declarada.
+
+Por outro lado, se uma classe for subclasse de RuntimeException, você não é obrigado a tratar a exceção. Nesse caso, o compilador não exige que você trate a exceção, permitindo que o programa compile sem a necessidade de tratamento explícito.
+
+No entanto, é recomendável tratar algumas exceções do tipo RuntimeException, como ArithmeticException, para tornar o código mais seguro e previsível.
