@@ -1,0 +1,216 @@
+# Expressões Lambda
+
+Expressões Lambda permitem criar implementações de métodos de forma mais curta e direta.
+
+Foram introduzidas no Java 8.
+
+---
+
+# Sintaxe
+
+(parâmetros) -> expressão
+
+ou
+
+(parâmetros) -> {
+    bloco de código
+}
+
+Exemplo:
+
+(x, y) -> x + y
+
+---
+
+# Objetivo
+
+Reduzir código repetitivo, principalmente ao trabalhar com interfaces funcionais.
+
+---
+
+# Exemplo sem Lambda
+
+interface Operacao {
+
+    int calcular(int a, int b);
+}
+
+Operacao soma = new Operacao() {
+
+    @Override
+    public int calcular(int a, int b) {
+        return a + b;
+    }
+};
+
+---
+
+# Exemplo com Lambda
+
+Operacao soma = (a, b) -> a + b;
+
+---
+
+# Interface Funcional
+
+Lambdas funcionam com interfaces funcionais.
+
+Uma interface funcional possui apenas um método abstrato.
+
+Exemplo:
+
+interface Operacao {
+
+    int calcular(int a, int b);
+}
+
+---
+
+# @FunctionalInterface
+
+Anotação usada para indicar que uma interface deve possuir apenas um método abstrato.
+
+Exemplo:
+
+@FunctionalInterface
+interface Operacao {
+
+    int calcular(int a, int b);
+}
+
+Se houver mais de um método abstrato, ocorre erro de compilação.
+
+---
+
+# Formas de escrita
+
+Sem parâmetros:
+
+() -> System.out.println("Olá");
+
+---
+
+Um parâmetro:
+
+x -> x * 2
+
+ou
+
+(x) -> x * 2
+
+---
+
+Vários parâmetros:
+
+(a, b) -> a + b
+
+---
+
+Bloco de código:
+
+(a, b) -> {
+
+    int resultado = a + b;
+
+    return resultado;
+}
+
+---
+
+# Tipos são inferidos
+
+Não é necessário informar os tipos dos parâmetros.
+
+Exemplo:
+
+(a, b) -> a + b
+
+em vez de:
+
+(int a, int b) -> a + b
+
+---
+
+# Variáveis externas
+
+Uma lambda pode acessar variáveis locais.
+
+Exemplo:
+
+int bonus = 10;
+
+Operacao soma = x -> x + bonus;
+
+---
+
+# Regra importante
+
+Variáveis locais usadas dentro da lambda devem ser final ou efetivamente final.
+
+Exemplo válido:
+
+int bonus = 10;
+
+x -> x + bonus;
+
+Exemplo inválido:
+
+int bonus = 10;
+
+bonus++;
+
+x -> x + bonus;
+
+---
+
+# Métodos default e static
+
+Interfaces funcionais podem possuir métodos default e static.
+
+O que importa é existir apenas um método abstrato.
+
+Exemplo:
+
+@FunctionalInterface
+interface Operacao {
+
+    int calcular(int a, int b);
+
+    default void mostrar() {
+
+    }
+
+    static void teste() {
+
+    }
+}
+
+---
+
+# Uso comum
+
+Lambdas são muito utilizadas com:
+
+- Collections
+- Streams
+- Comparator
+- Threads
+- Eventos de interface gráfica
+
+---
+
+# Exemplo com ArrayList
+
+ArrayList<String> nomes = new ArrayList<>();
+
+nomes.forEach(nome ->
+    System.out.println(nome)
+);
+
+---
+
+# Importante
+
+Lambda não cria um novo método.
+
+Ela fornece uma implementação para o método abstrato de uma interface funcional.
