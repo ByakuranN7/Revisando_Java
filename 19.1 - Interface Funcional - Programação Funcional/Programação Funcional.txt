@@ -1,0 +1,154 @@
+Quando você utiliza interfaces funcionais em Java, está praticando programação funcional. Essas interfaces permitem criar funções anônimas usando expressões lambda, que são fundamentais na programação funcional.
+
+# Interface Funcional
+
+Uma interface funcional é uma interface que possui apenas um método abstrato.
+
+Foi criada para ser utilizada com Expressões Lambda.
+
+---
+
+# Sintaxe
+
+@FunctionalInterface
+interface Operacao {
+
+    int calcular(int a, int b);
+}
+
+---
+
+# @FunctionalInterface
+
+Anotação opcional que indica que a interface deve possuir apenas um método abstrato.
+
+Exemplo:
+
+@FunctionalInterface
+interface Operacao {
+
+    int calcular(int a, int b);
+}
+
+Se for adicionado outro método abstrato, ocorre erro de compilação.
+
+---
+
+# Exemplo sem Lambda
+
+Operacao soma = new Operacao() {
+
+    @Override
+    public int calcular(int a, int b) {
+        return a + b;
+    }
+};
+
+---
+
+# Exemplo com Lambda
+
+Operacao soma = (a, b) -> a + b;
+
+---
+
+# Regra importante
+
+Uma interface funcional pode possuir apenas:
+
+- 1 método abstrato
+
+Mas pode possuir quantos quiser:
+
+- métodos default
+- métodos static
+- métodos herdados de Object
+
+---
+
+# Exemplo válido
+
+@FunctionalInterface
+interface Operacao {
+
+    int calcular(int a, int b);
+
+    default void mostrar() {
+
+    }
+
+    static void teste() {
+
+    }
+}
+
+Continua sendo uma interface funcional.
+
+---
+
+# Exemplo inválido
+
+@FunctionalInterface
+interface Operacao {
+
+    int somar(int a, int b);
+
+    int multiplicar(int a, int b);
+}
+
+Possui dois métodos abstratos.
+
+Não é uma interface funcional.
+
+---
+
+# Métodos de Object
+
+Métodos herdados de Object não contam.
+
+Exemplo:
+
+@FunctionalInterface
+interface Pessoa {
+
+    void falar();
+
+    String toString();
+}
+
+Continua sendo funcional.
+
+---
+
+# Uso principal
+
+Interfaces funcionais são usadas para:
+
+- Expressões Lambda
+- Method References
+- Streams
+- Collections
+
+---
+
+# Interfaces funcionais prontas
+
+Java possui várias interfaces funcionais no pacote:
+
+java.util.function
+
+Principais:
+
+Predicate<T>
+
+Function<T, R>
+
+Consumer<T>
+
+Supplier<T>
+
+---
+
+# Importante
+
+Toda expressão lambda precisa estar associada a uma interface funcional (muita coisa que você usa em uma expressão lambda pode não parecer envolver uma interface funcional, mas ela ta implicita lá).
