@@ -1,0 +1,3 @@
+No caso da API java.io, ela possui uma característica bloqueante, o que significa que é necessário fechar o objeto FileWriter⁣ ,por exemplo, após o uso.
+
+Por outro lado, ao utilizar a API java.nio, como no método Files.write, não é necessário fechar o arquivo, pois o acesso não bloqueia o sistema operacional. Assim, o sistema operacional não precisa esperar a operação terminar para utilizá-lo.
