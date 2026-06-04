@@ -1,0 +1,15 @@
+O try-with-resources (try com recursos) é uma forma mais elegante de lidar com o fechamento automático de recursos no Java. 
+
+Objetivo: O try-with-resources garante que recursos (como conexões de banco de dados ou arquivos) sejam fechados automaticamente após o uso.
+
+Repare na Sintaxe: Para utilizar o try-with-resources, basta colocar o recurso (como uma conexão com banco de dados ou um arquivo) entre parênteses, antes de abrir as chaves. Dessa forma, você pode usar esse recurso dentro do bloco sem se preocupar em fechar a conexão manualmente, por exemplo.
+
+Veja:
+
+
+try (Recurso recurso = obterRecurso()) {
+    // Código para usar o recurso
+}
+
+
+O recurso será fechado automaticamente ao final do bloco try, independentemente de ocorrer uma exceção ou não.
