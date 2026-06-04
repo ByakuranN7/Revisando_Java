@@ -31,6 +31,7 @@ public class ExemploSerializacao {
 	        }
 	    }
 	}
+    //geralmente se usa a de baixo se tiver certeza que o tipo sempre será o correto.
     /*@SuppressWarnings("unchecked")
     private static void deserializarContatos() throws IOException, ClassNotFoundException {
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("agenda.ser"))) {
