@@ -10,3 +10,9 @@ Comandos do terminal.txt
 
 # Executáveis
 *.exe
+
+# Arquivos pdf
+*.pdf
+
+!Exercicios/*.pdf
+!Exercicios/**/*.pdf
