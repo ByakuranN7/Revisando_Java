@@ -13,6 +13,3 @@ Comandos do terminal.txt
 
 # Arquivos pdf
 *.pdf
-
-!Exercicios/*.pdf
-!Exercicios/**/*.pdf
