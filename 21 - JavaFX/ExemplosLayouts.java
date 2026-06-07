@@ -1,5 +1,3 @@
-
-
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -19,14 +17,14 @@ public class ExemplosLayouts extends Application {
         Button botao4 = new Button("Botão 4");
 
         HBox hBox = new HBox(botao1, botao2);
-        hBox.setAlignment(Pos.CENTER_RIGHT);
+        hBox.setAlignment(Pos.CENTER);
 
         VBox vBox = new VBox(botao3, botao4);
-        vBox.setAlignment(Pos.CENTER_RIGHT);
+        vBox.setAlignment(Pos.CENTER);
 
         BorderPane borderPane = new BorderPane();
         borderPane.setTop(hBox);
-        borderPane.setBottom(vBox);
+        borderPane.setCenter(vBox);
 
         Scene cena = new Scene(borderPane, 300, 300);
         palco.setScene(cena);
