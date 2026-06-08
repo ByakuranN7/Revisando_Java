@@ -13,3 +13,8 @@ Comandos do terminal.txt
 
 # Arquivos pdf
 *.pdf
+
+# Mídias usadas apenas para testes locais de JavaFX
+*.jpg
+*.gif
+*.mp4
