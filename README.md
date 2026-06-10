@@ -8,7 +8,7 @@ O objetivo deste repositório é registrar a evolução dos estudos, criar uma b
 
 # O que é estudado neste repositório?
 
-Ao longo deste repositório são abordados conceitos fundamentais e intermediários da linguagem Java, incluindo:
+Ao longo deste repositório são abordados conceitos fundamentais da linguagem Java, incluindo:
 
 ## Fundamentos da Linguagem
 
