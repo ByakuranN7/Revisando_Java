@@ -161,7 +161,7 @@ Além dos tópicos já estudados, o curso utilizado como base para os estudos ta
 - Segurança em Aplicações Web
 - Integração entre Sistemas
 
-Esses conteúdos serão adicionados ao repositório conforme forem estudados.
+Esses conteúdos serão adicionados ao repositório futuramente.
 
 ---
 
