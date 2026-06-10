@@ -176,6 +176,7 @@ Durante o aprendizado, alguns projetos serão desenvolvidos como:
 - Mini Navegador Web Java
 - Editor de Texto Básico
 - Lista de Compras
+- Jogo da Forca
 - Sistema de Informações Climáticas em Tempo Real
 
 Além de outros projetos práticos desenvolvidos para aplicação dos conceitos estudados.
