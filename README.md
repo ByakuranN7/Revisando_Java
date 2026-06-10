@@ -12,6 +12,7 @@ Ao longo deste repositório são abordados conceitos fundamentais da linguagem J
 
 ## Fundamentos da Linguagem
 
+- Identificadores Válidos
 - Variáveis
 - Tipos Primitivos
 - Promoções Automáticas de Tipos
@@ -104,6 +105,7 @@ Cada seção possui exercícios práticos desenvolvidos para reforçar os concei
 # Estrutura do Repositório
 
 ```text
+00 - Comentários em Java e Identificadores Válidos
 01 - Exemplo de Variáveis
 02 - Exemplo de Tipos Primitivos
 03 - Promoções Automáticas
