@@ -122,8 +122,7 @@ Cada seção possui exercícios práticos desenvolvidos para reforçar os concei
 ├── Métodos
 ├── Getters e Setters
 ├── Passagem por Valor e por Referência
-├── Static
-└── Métodos Static
+├── Static e Membros Static
 
 09 - Arrays
 10 - Herança
