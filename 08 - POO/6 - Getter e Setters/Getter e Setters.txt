@@ -1,4 +1,4 @@
-Para que outras partes do seu código possam interagir isoladamente com essas variáveis, poderíamos adicionar dois tipos de métodos que seguem um padrão de nomes em Java:
+Para que outras partes do seu código possam interagir isoladamente com certas variáveis privadas, poderíamos adicionar dois tipos de métodos que seguem um padrão de nomes em Java:
 
 Getter: Um método para obter (pegar) o valor de uma variável membro. O nome segue o padrão get**NomeDaVariavel**().
 
