@@ -1,4 +1,4 @@
-# 08.2 - Construct (Construtores)
+# 08.2 - Constructors (Construtores)
 
 ## Objetivo
 
