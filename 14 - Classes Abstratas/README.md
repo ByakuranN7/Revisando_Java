@@ -214,6 +214,7 @@ abstract class Animal {
 - pode conter estado (atributos) e implementação
 - foco em reutilização de código
 - classes permitem apenas herança única (`extends`)
+- podem implementar interfaces
 
 ---
 
