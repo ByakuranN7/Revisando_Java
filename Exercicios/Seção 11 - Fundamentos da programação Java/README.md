@@ -61,21 +61,19 @@ Dentro da classe:
 
 ---
 
-## Exemplo de Saída
+## Resultado Esperado
 
-```text
-Quantidade de farinha disponível: 10
-Quantidade de açúcar disponível: 5
-```
+O programa deve exibir as informações cadastradas de forma clara e organizada no console.
 
 ---
 
-## Conceitos Praticados
+## O que este exercício reforça?
 
 * Declaração de variáveis
-* Tipo `int`
+* Utilização do tipo `int`
 * Atribuição de valores
-* Impressão de dados no console
+* Impressão de informações no console
+* Organização básica de um programa Java
 
 ---
 
@@ -110,22 +108,19 @@ Dentro da classe:
 
 ---
 
-## Exemplo de Saída
+## Resultado Esperado
 
-```text
-Largura: 5.0
-Altura: 3.0
-Área do retângulo: 15.0
-```
+O programa deve calcular corretamente a área do retângulo e apresentar o resultado de forma clara ao usuário.
 
 ---
 
-## Conceitos Praticados
+## O que este exercício reforça?
 
-* Tipo `double`
+* Utilização do tipo `double`
 * Operações matemáticas
 * Armazenamento de resultados em variáveis
-* Exibição de resultados
+* Manipulação de dados numéricos
+* Exibição de resultados no console
 
 ---
 
@@ -150,13 +145,13 @@ PromocaoAutomatica
 Declare as seguintes variáveis:
 
 ```java
-byte a
-short b
-char c
-int d
-long e
-float f
-double g
+byte a;
+short b;
+char c;
+int d;
+long e;
+float f;
+double g;
 ```
 
 Atribua valores para cada variável.
@@ -169,8 +164,6 @@ Atribua valores para cada variável.
 
 Exiba o valor de cada variável no console.
 
----
-
 ### Parte 2 - Operações Matemáticas
 
 Realize algumas operações envolvendo os tipos declarados.
@@ -178,14 +171,12 @@ Realize algumas operações envolvendo os tipos declarados.
 Exemplos:
 
 ```java
-a + b
-d + e
-f + g
+a + b;
+d + e;
+f + g;
 ```
 
 Armazene os resultados em variáveis compatíveis.
-
----
 
 ### Parte 3 - Tipo char
 
@@ -201,23 +192,21 @@ Observe que o tipo `char` representa caracteres individuais.
 
 ---
 
-## Exemplo de Saída
+## Resultado Esperado
 
-```text
-Valor de a: 10
-Valor de b: 20
-Valor de c: A
-Valor de d: 30
-Valor de e: 40
-Valor de f: 1.5
-Valor de g: 2.5
+O programa deve demonstrar o comportamento da promoção automática de tipos durante operações matemáticas e exibir os resultados obtidos.
 
-Resultado da soma entre byte e short: 30
-Resultado da soma entre int e long: 70
-Resultado da soma entre float e double: 4.0
+---
 
-Valor do char: A
-```
+## O que este exercício reforça?
+
+* Tipos primitivos
+* Utilização do tipo `char`
+* Operações matemáticas
+* Promoção automática de tipos
+* Conversões implícitas
+* Compatibilidade entre tipos numéricos
+* Saída de dados no console
 
 ---
 
@@ -230,16 +219,7 @@ Durante a implementação, tente responder:
 * O que acontece quando um `float` é combinado com um `double`?
 * Como o Java decide qual será o tipo final de uma expressão?
 
----
-
-## Conceitos Praticados
-
-* Tipos primitivos
-* Tipo `char`
-* Operações matemáticas
-* Promoção automática de tipos
-* Conversões implícitas
-* Saída de dados
+Não é necessário pesquisar imediatamente as respostas. Tente observar o comportamento do programa e tirar suas próprias conclusões antes de avançar.
 
 ---
 
@@ -262,3 +242,4 @@ Após concluir esta lista você terá praticado:
 ✅ Manipulação do tipo `char`
 
 Esses conceitos formam a base necessária para os próximos tópicos do repositório.
+
