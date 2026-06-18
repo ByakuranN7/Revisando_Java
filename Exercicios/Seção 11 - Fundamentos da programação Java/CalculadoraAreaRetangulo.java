@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Locale; //tava dando erro quando eu digitava com . os double, tipo 2.15cm. Dentro do código também tem que definir que o local é USA.
+import java.util.Locale;
 
 public class CalculadoraAreaRetangulo{
 	public static void main(String[] args){
